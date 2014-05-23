@@ -1,0 +1,97 @@
+// Hiragana for English / Japanese keyboard (by http://github.com/BruceCaldwell)
+
+default  partial alphanumeric_keys
+xkb_symbols "jph" {
+
+    include "jph(hira)"
+    name[Group1]= "Japanese";
+};
+
+partial hidden alphanumeric_keys
+xkb_symbols "hira" {
+    // Hiragana Unicode characters
+
+    key <HZTG> {
+	type[Group1]="PC_ALT_LEVEL2",
+	symbols[Group1]= [ Zenkaku_Hankaku, Kanji ]
+    };
+
+    key <AE01> { [ U306C, NULL, 1, exclam ] }; // ぬ
+    key <AE02> { [ U3075, NULL, 2, quotedbl ] }; // ふ
+    key <AE03> { [ U3042, U3041, 3, numbersign ] }; // あ ぁ
+    key <AE04> { [ U3046, U3045, 4, dollar ] }; // う ぅ
+    key <AE05> { [ U3048, U3047, 5, percent ] }; // え ぇ
+    key <AE06> { [ U304A, U3049, 6, ampersand ] }; // お ぉ
+    key <AE07> { [ U3084, U3083, 7, apostrophe ] }; // や ゃ
+    key <AE08> { [ U3086, U3085, 8, asterisk ] }; // ゆ ゅ
+    key <AE09> { [ U3088, U3087, 9, parenleft ] }; // よ ょ
+    key <AE10> { [ U308F, U3092, 0, parenright ] }; // わ を
+    key <AE11> { [ U307B, prolongedsound, minus, underscore ] }; // ほ ー
+    key <AE12> { [ U3078, NULL, equal, plus ] }; // へ
+
+    key <AD01> { [ U305F, NULL, q, Q ] }; // た
+    key <AD02> { [ U3066, NULL, w, W ] }; // て
+    key <AD03> { [ U3044, NULL, e, E ] }; // い
+    key <AD04> { [ U3059, NULL, r, R ] }; // す
+    key <AD05> { [ U304B, NULL, t, T ] }; // か
+    key <AD06> { [ U3093, NULL, y, Y ] }; // ん
+    key <AD07> { [ U306A, NULL, u, U ] }; // な
+    key <AD08> { [ U306B, NULL, i, I ] }; // に
+    key <AD09> { [ U3089, NULL, o, O ] }; // ら
+    key <AD10> { [ U305B, NULL, p, P ] }; // せ
+    key <AD11> { [ U3099, U300C, bracketleft, braceleft ] }; // ゙	「
+    key <AD12> { [ U309A, U300D, bracketright, braceright ] }; // ゚	」
+    key <AD13> { [ U3080, NULL, backslash, bar] }; // Broken
+    key <CAPS> { [ Eisu_toggle, Caps_Lock ] };
+
+    key <AC01> { [ U3061, NULL, a, A ] }; // ち
+    key <AC02> { [ U3068, NULL, s, S ] }; // と
+    key <AC03> { [ U3057, NULL, d, D ] }; // し
+    key <AC04> { [ U306F, NULL, f, F ] }; // は
+    key <AC05> { [ U304D, NULL, g, G ] }; // き
+    key <AC06> { [ U304F, NULL, h, H ] }; // く
+    key <AC07> { [ U307E, NULL, j, J ] }; // ま
+    key <AC08> { [ U306E, NULL, k, K ] }; // の
+    key <AC09> { [ U308A, NULL, l, L ] }; // り
+    key <AC10> { [ U308C, NULL, semicolon, colon ] }; // れ
+    key <AC11> { [ U3051, NULL, U0027, U0022 ] }; // け
+
+    key <AB01> { [ U3064, NULL, z, Z ] }; // つ
+    key <AB02> { [ U3055, NULL, x, X ] }; // さ
+    key <AB03> { [ U305D, NULL, c, C ] }; // そ
+    key <AB04> { [ U3072, NULL, v, V ] }; // ひ
+    key <AB05> { [ U3053, NULL, b, B ] }; // こ
+    key <AB06> { [ U307F, NULL, n, N ] }; // み
+    key <AB07> { [ U3082, NULL, m, M ] }; // も
+    key <AB08> { [ U306D, NULL, comma,  less ] }; // ね
+    key <AB09> { [ U308B, U3002, period, greater ] }; // る
+    key <AB10> { [ U3081, NULL, slash, question ] }; // め
+    key <LCTL> { [ Control_L		] };
+
+    key <NFER> { [ Muhenkan		] };
+
+    key <XFER> {
+	type[Group1]="PC_ALT_LEVEL2",
+	symbols[Group1]= [ Henkan, Mode_switch ]
+    };
+
+    key <HKTG> {
+	type[Group1]="PC_ALT_LEVEL2",
+	symbols[Group1]= [ Hiragana_Katakana, Romaji ]
+    };
+
+    key <EISU> {
+	type[Group1]="PC_ALT_LEVEL2",
+	symbols[Group1]= [ Eisu_toggle ]
+    };
+
+    key <KANA> {
+	type[Group1]="PC_ALT_LEVEL2",
+	symbols[Group1]= [ Hiragana_Katakana ]
+    };
+
+    key <PRSC> {
+	type[Group1]= "PC_ALT_LEVEL2",
+	symbols[Group1]= [ Print, Execute ]
+    };
+};
